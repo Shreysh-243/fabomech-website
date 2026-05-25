@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAB-O-MECH ENGINEERS — Precision Tube Processing Machines</title>
+  <meta name="description" content="FAB-O-MECH ENGINEERS manufactures precision tube bending, cutting, and end forming machines for India's leading automobile component manufacturers." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+
+      <!-- Row 1: Logo left + Company name center -->
+      <div class="nav-top">
+        <a href="index.html" class="nav-logo">
+          <img src="src/logo.png" alt="FAB-O-MECH Logo" class="nav-logo-img" />
+          <div class="nav-logo-icon" id="logo-fallback">F</div>
+        </a>
+        <div style="text-align:center;">
+          <div class="nav-company-name">
+            <span class="brand-red">FAB-O-MECH</span> ENGINEERS
+          </div>
+          <span class="nav-company-tagline">· Est. 2004</span>
+        </div>
+        <div style="position:absolute; right:24px; top:50%; transform:translateY(-50%);">
+          <img src="src/ce-cert.png" alt="Certification" style="height:60px; width:auto; object-fit:contain;" />
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Row 2: Nav links centered -->
+      <div class="nav-bottom">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="how-to-order.html" class="nav-link">How To Order</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="container" style="width:100%">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; padding: 80px 0;">
+        <div class="hero-content" style="padding:0">
+          <div class="hero-eyebrow">
+            <div class="hero-eyebrow-line"></div>
+            <span class="hero-eyebrow-text">Precision Engineering Since 2004</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="line-gold">Automobile</span><br>
+            Inner Tube<br>
+            <span class="line-outline">Manufacturing Machines</span><br><br>
+            Built to<br>Last
+          </h1>
+          <p class="hero-description">
+            FAB-O-MECH ENGINEERS specializes in the design and delivery of high performance manufacturing machinery specifically engineered for the automobile inner tube industry.
+          </p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-primary">Explore Products</a>
+            <a href="contact.html" class="btn btn-outline">Request Quotation</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-number" data-counter data-target="20" data-suffix="+">20+</div>
+              <div class="hero-stat-label">Years in Industry</div>
+            </div>
+            <div>
+              <div class="hero-stat-number" data-counter data-target="500" data-suffix="+">500+</div>
+              <div class="hero-stat-label">Machines Installed</div>
+            </div>
+            <div>
+              <div class="hero-stat-number" data-counter data-target="500" data-suffix="+">500+</div>
+              <div class="hero-stat-label">Clients Served</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-side" style="display:flex; justify-content:flex-end; align-items:center;">
+          <div class="hero-machine-frame">
+            <div class="hero-machine-placeholder">
+              <div class="machine-schematic">
+                <span class="schematic-label"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TICKER STRIP ═══════════ -->
+  <div style="background:var(--gold); overflow:hidden; padding:10px 0; border-top:2px solid var(--gold-dark); border-bottom:2px solid var(--gold-dark);">
+    <div class="ticker-inner" style="display:flex; gap:0; white-space:nowrap; animation: ticker-scroll 30s linear infinite;">
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">Tube Bending Machines</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">Tube Cutting Machines</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">End Forming Machines</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">Special Purpose Machines</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">IAF Certified Manufacturer</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">Made in India</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <!-- Duplicate for seamless loop -->
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">Tube Bending Machines</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">Tube Cutting Machines</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">End Forming Machines</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">Special Purpose Machines</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">ISO Certified Manufacturer</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+      <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:3px; color:var(--white); padding:0 32px; text-transform:uppercase;">Made in India</span>
+      <span style="font-family:var(--font-mono); font-size:11px; color:rgba(255,255,255,0.5); padding:0 8px;">✦</span>
+    </div>
+  </div>
+  <style>
+    @keyframes ticker-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+
+  <!-- ═══════════ COMPANY INTRO ═══════════ -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+        <div class="reveal-left">
+          <span class="section-label">Who We Are</span>
+          <h2 class="section-title">Engineering Precision at an Industrial Scale</h2>
+          <div class="divider" style="margin-top:20px; margin-bottom:24px;"></div>
+          <p style="font-size:15px; color:var(--gray-500); line-height:1.8; margin-bottom:20px;">
+            Established in 2004, FAB-O-MECH ENGINEERS is a premier manufacturer and exporter of high-performance machinery for the automobile inner tube industry. Based in the industrial hub of Thane, Maharashtra, we specialize in advanced solutions including Splicer Machines, Tube Curing Presses, and specialized Conveyor systems. Our engineering expertise powers the production lines of leading tire and tube manufacturers, delivering durable, damage-resistant machinery designed to meet the most rigorous industrial standards.
+          </p>
+          <p style="font-size:15px; color:var(--gray-500); line-height:1.8; margin-bottom:32px;">
+           
+          </p>
+          <a href="about.html" class="btn btn-outline-dark">Learn More About Us</a>
+        </div>
+        <div class="reveal-right">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div style="padding:28px 24px; background:var(--navy); border:1px solid rgba(204,43,43,0.15); border-radius:4px;">
+              <div style="font-family:var(--font-heading); font-size:48px; font-weight:900; color:var(--gold); line-height:1;" data-counter data-target="10500" data-suffix="">10500</div>
+              <div style="font-family:var(--font-mono); font-size:9px; letter-spacing:2px; color:var(--gray-300); text-transform:uppercase; margin-top:6px;">Sq.Ft. Facility</div>
+            </div>
+            <div style="padding:28px 24px; background:var(--off-white); border:1px solid var(--gray-100); border-radius:4px;">
+              <div style="font-family:var(--font-heading); font-size:48px; font-weight:900; color:var(--navy); line-height:1;" data-counter data-target="3">3</div>
+              <div style="font-family:var(--font-mono); font-size:9px; letter-spacing:2px; color:var(--gray-500); text-transform:uppercase; margin-top:6px;">Product Lines</div>
+            </div>
+            <div style="padding:28px 24px; background:var(--off-white); border:1px solid var(--gray-100); border-radius:4px;">
+              <div style="font-family:var(--font-heading); font-size:48px; font-weight:900; color:var(--navy); line-height:1;" data-counter data-target="100" data-suffix="%">100%</div>
+              <div style="font-family:var(--font-mono); font-size:9px; letter-spacing:2px; color:var(--gray-500); text-transform:uppercase; margin-top:6px;">On-time Delivery</div>
+            </div>
+            <div style="padding:28px 24px; background:var(--navy); border:1px solid rgba(204,43,43,0.15); border-radius:4px;">
+              <div style="font-family:var(--font-heading); font-size:48px; font-weight:900; color:var(--gold); line-height:1;">24/7</div>
+              <div style="font-family:var(--font-mono); font-size:9px; letter-spacing:2px; color:var(--gray-300); text-transform:uppercase; margin-top:6px;">Service Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FEATURED PRODUCTS — no spec rows ═══════════ -->
+  <section class="section" style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">Our Product Range</span>
+        <h2 class="section-title">Machines Built for Production Floors</h2>
+        <div class="divider divider--center"></div>
+        <p class="section-subtitle">Each machine is engineered to meet the demands of modern automobile component manufacturing with precision, reliability, and ease of operation.</p>
+      </div>
+      <div class="products-grid">
+
+        <!-- Card 1 — NO spec rows -->
+        <div class="product-card reveal delay-1">
+          <div class="product-card-image">
+            <img src="src/BROCHURE-VALVE-FIXING-MACHINE-1/VALVE-FIXING-MACHINE.jpg" alt="Valve Fixing Machine" style="width:100%; height:100%; object-fit:contain;" />
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-category"></span>
+            <h3 class="product-card-title">Valve Fixing Machine</h3>
+            <p class="product-card-desc">Multi-stack CNC tube bending machine with servo-driven bend axis, CNC-controlled clamp, and pressure die. Ideal for exhaust and hydraulic tubing.</p>
+            <a href="Detail VALVE FIXING MACHINE.html" class="btn btn-outline-dark" style="width:100%; justify-content:center;">View Details</a>
+          </div>
+        </div>
+
+        <!-- Card 2 — NO spec rows -->
+        <div class="product-card reveal delay-2">
+          <div class="product-card-image">
+            <img src="src/USER-MANUAL-TUBE-CURING-PRESS-1/TUBE-CURING.jpg" alt="Tube Curing Press" style="width:100%; height:100%; object-fit:contain;" />
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-category"></span>
+            <h3 class="product-card-title">Tube Curing Press</h3>
+            <p class="product-card-desc">High-speed orbital tube cutting machine with servo feed, automatic length control, and deburring unit for clean, burr-free cuts every time.</p>
+            <a href="Detail TUBE CURING PRESS.html" class="btn btn-outline-dark" style="width:100%; justify-content:center;">View Details</a>
+          </div>
+        </div>
+
+        <!-- Card 3 — NO spec rows -->
+        <div class="product-card reveal delay-3">
+          <div class="product-card-image">
+            <img src="src/DEFLATION-UNIT-1/DEFLATION-UNIT.jpg" alt="Tube Deflation Unit" style="width:100%; height:100%; object-fit:contain;" />
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-category"></span>
+            <h3 class="product-card-title">Tube Deflation Unit</h3>
+            <p class="product-card-desc">Hydraulic tube end forming machine capable of expanding, reducing, flaring, and beading operations. Multi-stage forming achievable in a single setup.</p>
+            <a href="Detail TUBE DEFLATION UNIT.html" class="btn btn-outline-dark" style="width:100%; justify-content:center;">View Details</a>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="products.html" class="btn btn-primary">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ WHY CHOOSE US ═══════════ -->
+  <section class="section" style="background:var(--white);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Strengths</span>
+        <h2 class="section-title">Why Leading Auto Component<br>Factories Choose FAB-O-MECH</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal delay-1">
+          <div class="why-card-number">01</div>
+          <div class="why-card-icon">🏭</div>
+          <h3 class="why-card-title">Advanced Manufacturing Infrastructure</h3>
+          <p class="why-card-text">FAB-O-MECH ENGINEERS operates multiple manufacturing units in Bhiwandi and Thane with dedicated production, quality control, and R&D facilities for high-performance automobile tube machinery manufacturing.</p>
+        </div>
+        <div class="why-card reveal delay-2">
+          <div class="why-card-number">02</div>
+          <div class="why-card-icon">⚡</div>
+          <h3 class="why-card-title">Specialized Tube Machinery Expertise</h3>
+          <p class="why-card-text">We manufacture and export a wide range of machinery for automobile tube manufacturing plants including extrusion conveyors, auto patch applicators, tube splicing machines, curing presses, valve ovens, and automatic cutting systems.</p>
+        </div>
+        <div class="why-card reveal delay-3">
+          <div class="why-card-number">03</div>
+          <div class="why-card-icon">🔬</div>
+          <h3 class="why-card-title">Precision Engineering & Workshop Capability</h3>
+          <p class="why-card-text">Our workshop is equipped with imported milling machines, radial drills, lathe machines, welding systems, generators, and industrial fabrication equipment enabling precision engineering and reliable machine performance.</p>
+        </div>
+        <div class="why-card reveal delay-4">
+          <div class="why-card-number">04</div>
+          <div class="why-card-icon">🛠️</div>
+          <h3 class="why-card-title">Trusted By Industry Leaders</h3>
+          <p class="why-card-text">Since 2004, FAB-O-MECH ENGINEERS has served leading tyre and tube manufacturers including MRF, Apollo, CEAT, JK Tyres, BKT, and multiple international clients across Bangladesh, Kenya, Nepal, Sri Lanka, and Uganda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ INDUSTRIES SERVED ═══════════ -->
+  <section class="section industries-bg">
+    <div class="container" style="position:relative; z-index:1;">
+      <div class="section-header section-header--center reveal">
+        <span class="section-label">Industries Served</span>
+        <h2 class="section-title section-title--black">Built for the Industries<br>That Build India</h2>
+        <div class="divider divider--center"></div> 
+      </div>
+      <div class="industries-grid reveal">
+        <div class="industry-item"><div class="industry-icon">🚗</div><div class="industry-name">Passenger Cars</div></div>
+        <div class="industry-item"><div class="industry-icon">🚛</div><div class="industry-name">Commercial Vehicles</div></div>
+        <div class="industry-item"><div class="industry-icon">🏍️</div><div class="industry-name">Two Wheelers</div></div>
+        <div class="industry-item"><div class="industry-icon">🚜</div><div class="industry-name">Tractors & Agri</div></div>
+        <div class="industry-item"><div class="industry-icon">🏭</div><div class="industry-name">Industrial Automation</div></div>
+        <div class="industry-item"><div class="industry-icon">⚙️</div><div class="industry-name">General Engineering</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROCESS STRIP ═══════════ -->
+  <section class="process-strip section-sm">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:32px;" class="reveal">
+        <span class="section-label">Our Process</span>
+        <h3 style="font-family:var(--font-heading); font-size:28px; font-weight:800; color:var(--navy); text-transform:uppercase; letter-spacing:1px;">From Inquiry to Installation</h3>
+      </div>
+      <div class="process-steps reveal">
+        <div class="process-step"><div class="process-step-num">STEP 01</div><div class="process-step-icon">📋</div><div class="process-step-title">Inquiry</div></div>
+        <div class="process-step"><div class="process-step-num">STEP 02</div><div class="process-step-icon">💬</div><div class="process-step-title">Technical Discussion</div></div>
+        <div class="process-step"><div class="process-step-num">STEP 03</div><div class="process-step-icon">📄</div><div class="process-step-title">Quotation</div></div>
+        <div class="process-step"><div class="process-step-num">STEP 04</div><div class="process-step-icon">🏭</div><div class="process-step-title">Manufacturing</div></div>
+        <div class="process-step"><div class="process-step-num">STEP 05</div><div class="process-step-icon">✅</div><div class="process-step-title">Factory Testing</div></div>
+        <div class="process-step"><div class="process-step-num">STEP 06</div><div class="process-step-icon">🚚</div><div class="process-step-title">Delivery & Install</div></div>
+      </div>
+      <div style="text-align:center; margin-top:28px;">
+        <a href="how-to-order.html" class="btn btn-outline-dark">See Full Process Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA BANNER ═══════════ -->
+  <section class="cta-banner section">
+    <div class="container">
+      <div class="cta-inner reveal">
+        <div>
+          <span class="section-label" style="color:var(--gold);">Ready to Automate Your Line?</span>
+          <h2 class="cta-text-title">Get a Custom Quote<br>for Your Application</h2>
+          <p class="cta-text-subtitle">Share your tube specifications and our engineering team will respond within 24 hours.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+          <a href="products.html" class="btn btn-outline">Browse Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">FAB-O-<span>MECH</span> ENGINEERS</div>
+          <div class="footer-brand-tagline">India · Est. 2004</div>
+          <p class="footer-brand-desc">Precision tube processing machinery engineered for India's automobile component manufacturing sector. Quality you can measure in microns.</p>
+          <div class="footer-certifications">
+            <span class="cert-badge"></span>
+            <span class="cert-badge"></span>
+            <span class="cert-badge"></span>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="how-to-order.html" class="footer-link">How To Order</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>T - 40, Jai Mata Di Compound, Village: Kalher, Thane - Bhiwandi Wadpa Road, Tal.: Bhiwandi, Dist. Thane - 421 302. (MH), India</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span>+91 09272235847<br>+9109270108847</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span> fabomech@yahoo.co.in<br>fabomechengg@gmail.com</span>
+          </div>
+        </div>
+      </div>
+        
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 FAB-O-MECH ENGINEERS. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

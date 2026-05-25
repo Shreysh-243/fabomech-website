@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — FAB-O-MECH ENGINEERS</title>
+  <meta name="description" content="Contact FAB-O-MECH ENGINEERS — Submit a technical inquiry, request a quotation, or speak with our application engineers directly." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+
+      <!-- Row 1: Logo left + Company name center -->
+      <div class="nav-top">
+        <a href="index.html" class="nav-logo">
+          <img src="src/logo.png" alt="FAB-O-MECH Logo" class="nav-logo-img" />
+          <div class="nav-logo-icon" id="logo-fallback">F</div>
+        </a>
+        <div style="text-align:center;">
+          <div class="nav-company-name">
+            <span class="brand-red">FAB-O-MECH</span> ENGINEERS
+          </div>
+          <span class="nav-company-tagline">· Est. 2004</span>
+        </div>
+        <div style="position:absolute; right:24px; top:50%; transform:translateY(-50%);">
+          <img src="src/ce-cert.png" alt="Certification" style="height:60px; width:auto; object-fit:contain;" />
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Row 2: Nav links centered -->
+      <div class="nav-bottom">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="how-to-order.html" class="nav-link">How To Order</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ═══════════ PAGE HERO ═══════════ -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>Contact Us</span>
+        </div>
+        <h1 class="page-hero-title">Get in <span>Touch</span><br>With Our Team</h1>
+        <p class="page-hero-subtitle">Submit a technical inquiry, request a quotation, or ask a question. Our application engineers respond within 48 business hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT SECTION ═══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: Form -->
+        <div class="reveal-left">
+          <h2 class="contact-form-title">Submit Your Technical Inquiry</h2>
+
+          <!-- ✅ SUCCESS MESSAGE — shown after form submission -->
+          <div class="form-success-msg" id="form-success">
+            ✓ Inquiry received! Our application engineer will respond within 48 business hours.
+          </div>
+
+          <!--
+            ══════════════════════════════════════════════════
+            FORMSPREE BACKEND SETUP (FREE — takes 2 minutes)
+            ══════════════════════════════════════════════════
+            1. Go to https://formspree.io and sign up free
+            2. Click "New Form" → give it a name
+            3. Copy your form endpoint (looks like https://formspree.io/f/xyzabc123)
+            4. Replace YOUR_FORMSPREE_ID below with that endpoint
+            5. Done — every submission goes directly to your email inbox!
+            ══════════════════════════════════════════════════
+          -->
+          <form
+            id="inquiry-form"
+            action="https://formspree.io/f/mjgzabje"
+            method="POST"
+            novalidate
+          >
+
+            <!-- Formspree: send reply to customer's email -->
+            <input type="hidden" name="_replyto" value="" id="replyto-field" />
+            <!-- Formspree: custom subject line -->
+            <input type="hidden" name="_subject" value="New Machine Inquiry — FAB-O-MECH Website" />
+            <input type="hidden" name="_sheet" value="https://api.sheetbest.com/sheets/52e0a773-55cb-45c3-bebc-5a24d050776e" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name <span class="form-required">*</span></label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="company">Company Name <span class="form-required">*</span></label>
+                <input class="form-input" type="text" id="company" name="company" placeholder="Your organisation" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span class="form-required">*</span></label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="you@company.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone / Mobile <span class="form-required">*</span></label>
+                <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98000 00000" required />
+              </div>
+            </div>
+
+     
+
+            <div class="form-group">
+              <label class="form-label" for="message">INQUIRY</label>
+              <textarea class="form-textarea" id="message" name="message" rows="5" placeholder="Describe your application, component being manufactured, any special requirements, urgency, or anything else helpful. You can also mention if you'd like us to visit your facility for a needs assessment."></textarea>
+            </div>
+
+        
+
+            <button type="submit" class="btn btn-primary form-submit-btn" id="submit-btn" style="width:100%; justify-content:center; font-size:16px; padding:16px;">
+              Submit Inquiry →
+            </button>
+            <p style="font-family:var(--font-mono); font-size:10px; letter-spacing:1px; color:var(--gray-300); text-align:center; margin-top:12px; text-transform:uppercase;">
+              Your information is confidential and will only be used to respond to your inquiry.
+            </p>
+          </form>
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <div class="reveal-right">
+
+          <!-- Contact Info -->
+          <div class="contact-info-card">
+            <h3 class="contact-info-title">Contact Information</h3>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div>
+                <div class="contact-item-label">Factory Address</div>
+                <div class="contact-item-value">
+                  T-40, Jai Mata Di Compound,<br> 
+                  Kalher, Bhiwandi,<br>
+                  Thane – 421302,<br>
+                  Maharashtra, India<br>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div>
+                <div class="contact-item-label">Phone / Mobile</div>
+                <div class="contact-item-value">
+                  +91 98192 06178 (Primary Contact)<br>
+                  +91 92722 35847 (Factory)<br>
+                  +91 92701 88477 (Factory)
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value">
+                  fabomech@yahoo.co.in (General)<br>
+                  fabomechengg@gmail.com (Sales & Support)<br>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item" style="margin-bottom:0;">
+              <div class="contact-item-icon">🌐</div>
+              <div>
+                <div class="contact-item-label">GST & Company</div>
+                <div class="contact-item-value">
+                 Proprietor: Dhiman Kuldeep K. Singh<br>
+                 Established: October 2004<br>
+                 GSTIN: 27AHLPD6285A1ZG<br>
+                 IEC Code: 0313020451<br>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div class="business-hours-card">
+            <h4 class="business-hours-title">🕐 Business Hours</h4>
+            <div class="hours-row">
+              <span class="hours-day">Monday – Friday</span>
+              <span class="hours-time">9:00 AM – 8:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Saturday</span>
+              <span class="hours-time">9:00 AM – 8:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sunday</span>
+              <span class="hours-time closed">Closed</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">National Holidays</span>
+              <span class="hours-time closed">Closed</span>
+            </div>
+            <div style="margin-top:12px; padding:10px 12px; background:var(--green-pale); border:1px solid rgba(217,58,31,0.2); border-radius:3px;">
+              <div style="font-family:var(--font-mono); font-size:9px; letter-spacing:1.5px; color:var(--green); text-transform:uppercase;">Trusted by Leading Tyre & Tube Manufacturers</div>
+              <div style="font-size:13px; color:var(--text-body); margin-top:4px;">Delivering precision machinery, quality manufacturing, and trusted high-performance machinery since 2004.</div>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="map-placeholder">
+            <div class="map-placeholder-icon">🗺️</div>
+            <div class="map-placeholder-text">Kalher, Bhiwandi, Thane – 421302, Maharashtra, India</div>
+            <div style="font-family:var(--font-mono); font-size:9px; letter-spacing:1px; color:var(--gray-300); margin-top:4px;">T-40, Jai Mata Di Compound</div>
+          </div>
+          <div style="text-align:center; margin-top:8px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=T-40+Jai+Mata+Di+Compound+Kalher+Bhiwandi+Thane+421302+Maharashtra+India" target="_blank" rel="noopener" style="font-family:var(--font-mono); font-size:10px; letter-spacing:1.5px; color:var(--gold); text-decoration:none; text-transform:uppercase; border-bottom:1px solid rgba(204,43,43,0.3);">Open in Google Maps →</a>
+          </div>
+
+          <!-- Directions -->
+          <div style="background:var(--off-white); padding:20px; border:1px solid var(--gray-100); border-radius:4px; margin-top:16px;">
+            <h5 style="font-family:var(--font-heading); font-size:14px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:2px; margin-bottom:12px;">How to Reach Us</h5>
+            <div style="font-size:13px; color:var(--gray-500); line-height:1.7;">
+              <strong style="color:var(--navy);">By Road:</strong> Located in Kalher, Bhiwandi, FAB-O-MECH ENGINEERS is easily accessible via Mumbai–Nashik Highway (NH-160). The factory is situated within Jai Mata Di Compound, approximately 15–20 minutes from Bhiwandi city centre.<br><br>
+              <strong style="color:var(--navy);">From Airport:</strong> 35–40 km from Mumbai International Airport.<br><br>
+              <strong style="color:var(--navy);">Nearest Railway:</strong> Thane Station & Bhiwandi Road Station.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ QUICK CONTACT STRIP ═══════════ -->
+  <section class="section-sm" style="background:var(--navy); border-top:1px solid rgba(204,43,43,0.2);">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-around; gap:32px; flex-wrap:wrap; text-align:center;">
+        <div>
+          <div style="font-size:24px; margin-bottom:6px;">📞</div>
+          <div style="font-family:var(--font-heading); font-size:16px; font-weight:700; color:var(--white); text-transform:uppercase; letter-spacing:1px;">Call Sales</div>
+          <div style="font-family:var(--font-mono); font-size:13px; color:var(--gold); margin-top:4px;">+91 98192 06178</div>
+        </div>
+        <div style="width:1px; height:48px; background:rgba(255,255,255,0.06);"></div>
+        <div>
+          <div style="font-size:24px; margin-bottom:6px;">✉️</div>
+          <div style="font-family:var(--font-heading); font-size:16px; font-weight:700; color:var(--white); text-transform:uppercase; letter-spacing:1px;">Email Sales</div>
+          <div style="font-family:var(--font-mono); font-size:13px; color:var(--gold); margin-top:4px;">fabomechengg@gmail.com</div>
+        </div>
+        <div style="width:1px; height:48px; background:rgba(255,255,255,0.06);"></div>
+        <div>
+          <div style="font-size:24px; margin-bottom:6px;">🔧</div>
+          <div style="font-family:var(--font-heading); font-size:16px; font-weight:700; color:var(--white); text-transform:uppercase; letter-spacing:1px;">Service Support</div>
+          <div style="font-family:var(--font-mono); font-size:13px; color:var(--gold); margin-top:4px;">+91 92722 35847</div>
+        </div>
+        <div style="width:1px; height:48px; background:rgba(255,255,255,0.06);"></div>
+        <div>
+          <div style="font-size:24px; margin-bottom:6px;">📍</div>
+          <div style="font-family:var(--font-heading); font-size:16px; font-weight:700; color:var(--white); text-transform:uppercase; letter-spacing:1px;">Visit Our Factory</div>
+          <div style="font-family:var(--font-mono); font-size:13px; color:var(--gold); margin-top:4px;">T-40, Jai Mata Di Compound,
+Kalher, Bhiwandi, Thane, Maharashtra</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">FAB-O-<span>MECH</span> ENGINEERS</div>
+          <div class="footer-brand-tagline">India · Est. 2004</div>
+          <p class="footer-brand-desc">Precision tube processing machinery engineered for India's automobile component manufacturing sector.</p>
+          <div class="footer-certifications">
+            <span class="cert-badge"></span>
+            <span class="cert-badge"></span>
+            <span class="cert-badge"></span>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="how-to-order.html" class="footer-link">How To Order</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+         <div>
+          <h4 class="footer-heading">Contact Us</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📍</span>
+            <span>T - 40, Jai Mata Di Compound, Village: Kalher, Thane - Bhiwandi Wadpa Road, Tal.: Bhiwandi, Dist. Thane - 421 302. (MH), India</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">📞</span>
+            <span>+91 09272235847<br>+9109270108847</span>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-icon">✉️</span>
+            <span> fabomech@yahoo.co.in<br>fabomechengg@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 FAB-O-MECH ENGINEERS. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+document.getElementById("inquiry-form").addEventListener("submit", async function(e) {
+
+  e.preventDefault();
+
+  const form = e.target;
+
+  const data = {
+    name: document.getElementById("name").value,
+    company: document.getElementById("company").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    inquiry: document.getElementById("message").value
+  };
+
+  try {
+
+    // SEND TO GOOGLE SHEET
+    await fetch("https://api.sheetbest.com/sheets/52e0a773-55cb-45c3-bebc-5a24d050776e", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    // SEND TO FORMSPREE EMAIL
+    await fetch(form.action, {
+      method: "POST",
+      headers: {
+        "Accept": "application/json"
+      },
+      body: new FormData(form)
+    });
+
+    // SUCCESS MESSAGE
+    document.getElementById("form-success").style.display = "block";
+
+    // RESET FORM
+    form.reset();
+
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+  }
+
+});
+</script>
+</body>
+</html>
