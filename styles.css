@@ -11,40 +11,51 @@
    CSS VARIABLES
    ============================================================ */
 :root {
+  /* ── Indigo — hero, footer, dark sections ── */
   --navy:        #2d1f7a;
   --navy-mid:    #231870;
   --navy-light:  #3d2d8f;
+ 
+  /* ── Brand Red — buttons, highlights, hover ── */
   --gold:        #cc2b2b;
   --gold-light:  #e04040;
   --gold-dark:   #a82020;
+ 
+  /* ── Red-Orange — section labels, tags, icons ── */
   --green:       #d93a1f;
   --green-light: #e85533;
   --green-pale:  #fdf0ee;
+ 
+  /* ── Light backgrounds ── */
   --white:       #ffffff;
   --off-white:   #f8f9fc;
   --light-blue:  #eef1fb;
+ 
+  /* ── Grays ── */
   --gray-100:    #e8ecf1;
   --gray-300:    #b0bac8;
   --gray-500:    #6b7a94;
   --gray-700:    #384259;
+ 
+  /* ── Text ── */
   --text-dark:   #1a1230;
   --text-body:   #3a3a5c;
+ 
+  /* ── Typography ── */
   --font-heading: 'Barlow Condensed', sans-serif;
   --font-body:    'Barlow', sans-serif;
   --font-mono:    'Share Tech Mono', monospace;
+ 
+  /* ── Shadows ── */
   --shadow-sm:  0 2px 8px rgba(45,31,122,0.09);
   --shadow-md:  0 6px 24px rgba(45,31,122,0.15);
   --shadow-lg:  0 16px 48px rgba(45,31,122,0.22);
+ 
   --radius:     4px;
   --transition: 0.3s ease;
   --max-width:  1280px;
-
-  /* Navbar heights — single source of truth */
-  --nav-top-h:    76px;
-  --nav-bottom-h: 40px;
-  --nav-total:    116px; /* 76 + 40 */
 }
-
+ 
 /* ============================================================
    RESET & BASE
    ============================================================ */
@@ -83,7 +94,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
  
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(28px, 5vw, 52px);
+  font-size: clamp(32px, 5vw, 52px);
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.1;
@@ -181,7 +192,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
  
 /* ============================================================
-   NAVIGATION
+   NAVIGATION — BRIGHT WHITE, TWO-ROW LAYOUT
+   Row 1: Logo (extreme left) | Company name (center) | Cert badges (extreme right)
+   Row 2: Nav links centered
    ============================================================ */
 .navbar {
   position: fixed;
@@ -196,17 +209,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   box-shadow: 0 4px 32px rgba(45,31,122,0.18);
 }
  
-/* Row 1 */
+/* ── Row 1 ── */
 .nav-top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: var(--nav-top-h);
+  justify-content: center;   /* center: company name */
+  height: 76px;              /* slightly taller for bigger elements */
   position: relative;
   padding: 0 24px;
 }
  
-/* Logo — extreme LEFT */
+/* ── Logo — extreme LEFT, larger ── */
 .nav-logo {
   position: absolute;
   left: 24px;
@@ -217,10 +230,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-decoration: none;
   flex-shrink: 0;
 }
-
-/* "F" fallback icon */
+ 
+/* "F" icon — bigger size */
 .nav-logo-icon {
-  width: 58px;
+  width: 58px;              /* was 48px → now 58px */
   height: 58px;
   background: var(--navy);
   border-radius: var(--radius);
@@ -228,48 +241,53 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   justify-content: center;
   font-family: var(--font-heading);
-  font-size: 34px;
+  font-size: 34px;          /* was 26px → now 34px */
   font-weight: 900;
   color: var(--white);
   flex-shrink: 0;
 }
-
+ 
 /* Real logo image */
 .nav-logo-img {
-  height: 58px;
+  height: 58px;             /* match icon height */
   width: auto;
   object-fit: contain;
   display: block;
 }
-
-/* Company name — CENTER */
+ 
+/* ── Company name — CENTER, larger, bold italic, all red ── */
 .nav-company-name {
   font-family: var(--font-heading);
-  font-size: 36px;
+  font-size: 36px;          /* was 28px → now 36px */
   font-weight: 900;
-  font-style: italic;
-  color: var(--gold);
+  font-style: italic;       /* italic as requested */
+  color: var(--gold);       /* ALL text in red (both FAB-O-MECH and ENGINEERS) */
   letter-spacing: 3px;
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
   line-height: 1;
 }
-.nav-company-name .brand-red { color: var(--gold); }
  
+/* "FAB-O-MECH" span — same red color as ENGINEERS */
+.nav-company-name .brand-red {
+  color: var(--gold);       /* same color — whole name is red */
+}
+ 
+/* Est. tagline — bold and visible */
 .nav-company-tagline {
   font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 10px;          /* slightly bigger */
+  font-weight: 700;         /* BOLD — was not bold before */
   letter-spacing: 3px;
-  color: var(--navy);
+  color: var(--navy);       /* darker color so it's more visible */
   text-transform: uppercase;
   text-align: center;
   margin-top: 4px;
   display: block;
 }
  
-/* Cert badges — extreme RIGHT */
+/* ── Certification badges — extreme RIGHT ── */
 .nav-cert-badges {
   position: absolute;
   right: 24px;
@@ -280,9 +298,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 8px;
   flex-shrink: 0;
 }
+ 
+/* Each cert badge — same height as the logo icon */
 .nav-cert-badge {
-  width: 58px;
-  height: 58px;
+  width: 58px;              /* same width as logo icon */
+  height: 58px;             /* same height as logo icon */
   background: var(--navy);
   border-radius: var(--radius);
   display: flex;
@@ -294,6 +314,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-align: center;
   padding: 4px;
 }
+ 
 .nav-cert-badge-text {
   font-family: var(--font-heading);
   font-size: 13px;
@@ -303,6 +324,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
+ 
 .nav-cert-badge-sub {
   font-family: var(--font-mono);
   font-size: 7px;
@@ -311,13 +333,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-transform: uppercase;
   line-height: 1;
 }
-
-/* Row 2: Nav links */
+ 
+/* ── Row 2: Nav links ── */
 .nav-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: var(--nav-bottom-h);
+  height: 40px;
   background: var(--off-white);
   border-top: 1px solid var(--gray-100);
 }
@@ -362,10 +384,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 8px;
   cursor: pointer;
   position: absolute;
-  right: 16px;
+  right: 24px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
 }
 .nav-toggle span {
   display: block;
@@ -373,13 +394,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--navy);
   transition: all var(--transition);
 }
-/* Hamburger → X animation */
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
+ 
 /* ============================================================
-   HERO
+   HERO — padding updated for slightly taller navbar (116px)
    ============================================================ */
 .hero {
   min-height: 100vh;
@@ -388,7 +405,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: var(--nav-total);
+  padding-top: 116px;       /* 76px top row + 40px bottom row */
 }
  
 .hero-bg {
@@ -410,7 +427,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-content { position: relative; z-index: 2; padding: 80px 0; }
  
 .hero-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-.hero-eyebrow-line  { width: 48px; height: 2px; background: var(--gold); flex-shrink: 0; }
+.hero-eyebrow-line  { width: 48px; height: 2px; background: var(--gold); }
 .hero-eyebrow-text  {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -421,7 +438,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
  
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(40px, 8vw, 96px);
+  font-size: clamp(48px, 8vw, 96px);
   font-weight: 900;
   text-transform: uppercase;
   line-height: 0.95;
@@ -503,28 +520,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .schematic-label { font-family: var(--font-mono); font-size: 10px; color: rgba(204,43,43,0.5); letter-spacing: 2px; }
  
 /* ============================================================
-   TICKER / MARQUEE STRIP
-   ============================================================ */
-.ticker-strip {
-  background: var(--navy);
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 12px 0;
-}
-.ticker-strip span {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: rgba(255,255,255,0.6);
-  text-transform: uppercase;
-}
-
-/* ============================================================
    PRODUCTS GRID
    ============================================================ */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 24px;
 }
 .product-card {
@@ -664,7 +664,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .industries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 2px;
 }
 .industry-item {
@@ -684,10 +684,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .industry-icon  { font-size: 32px; margin-bottom: 12px; }
 .industry-name {
   font-family: var(--font-heading);
-  font-size: 13px; font-weight: 600;
+  font-size: 14px; font-weight: 600;
   color: var(--navy);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
  
 /* ============================================================
@@ -704,11 +704,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 0;
   overflow-x: auto;
   padding-bottom: 8px;
-  -webkit-overflow-scrolling: touch;
 }
 .process-step {
-  flex: 1; min-width: 140px;
-  padding: 28px 12px;
+  flex: 1; min-width: 160px;
+  padding: 32px 16px;
   text-align: center;
   position: relative;
 }
@@ -729,7 +728,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .process-step-icon  { font-size: 28px; margin-bottom: 8px; }
 .process-step-title {
   font-family: var(--font-heading);
-  font-size: 13px; font-weight: 700;
+  font-size: 14px; font-weight: 700;
   color: var(--navy);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -763,7 +762,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .cta-text-title {
   font-family: var(--font-heading);
-  font-size: clamp(24px, 4vw, 44px);
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 800;
   color: var(--white);
   text-transform: uppercase;
@@ -851,11 +850,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .footer-legal a:hover { color: var(--gold); }
  
 /* ============================================================
-   PAGE HERO
+   PAGE HERO — padding updated for taller navbar (116px)
    ============================================================ */
 .page-hero {
   background: var(--navy);
-  padding: 168px 0 80px;
+  padding: 168px 0 80px;   /* was 160px, now 168px for taller navbar */
   position: relative;
   overflow: hidden;
 }
@@ -875,14 +874,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 11px; letter-spacing: 2px;
   color: rgba(255,255,255,0.45);
   text-transform: uppercase;
-  flex-wrap: wrap;
 }
 .breadcrumb a { color: var(--gold); transition: color var(--transition); }
 .breadcrumb a:hover { color: var(--gold-light); }
 .breadcrumb-sep { color: rgba(255,255,255,0.25); }
 .page-hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(36px, 7vw, 80px);
+  font-size: clamp(48px, 7vw, 80px);
   font-weight: 900;
   color: var(--white);
   text-transform: uppercase;
@@ -966,7 +964,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .stat-item:last-child { border-right: none; }
 .stat-number {
   font-family: var(--font-heading);
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(40px, 5vw, 64px);
   font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 8px;
 }
 .stat-label {
@@ -1024,9 +1022,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .filter-bar {
   background: var(--white);
   border-bottom: 2px solid var(--gray-100);
-  padding: 16px 0;
+  padding: 20px 0;
   position: sticky;
-  top: var(--nav-total);
+  top: 116px;              /* updated for taller navbar */
   z-index: 100;
   box-shadow: 0 2px 8px rgba(45,31,122,0.06);
 }
@@ -1059,7 +1057,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 12px; border-radius: var(--radius);
 }
 .gallery-main img { width: 100%; height: 100%; object-fit: cover; }
-.gallery-thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
+.gallery-thumbs { display: flex; gap: 8px; }
 .gallery-thumb {
   width: 80px; height: 60px;
   background: var(--light-blue);
@@ -1079,7 +1077,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .product-detail-title {
   font-family: var(--font-heading);
-  font-size: clamp(24px, 4vw, 44px);
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 900; color: var(--navy);
   text-transform: uppercase; line-height: 1.1;
   letter-spacing: 1px; margin-bottom: 8px; margin-top: 16px;
@@ -1282,7 +1280,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .map-placeholder-icon { font-size: 32px; }
 .map-placeholder-text { font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: var(--navy); text-transform: uppercase; opacity: 0.5; }
-
+ 
 /* ============================================================
    SCROLL REVEAL ANIMATIONS
    ============================================================ */
@@ -1297,9 +1295,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
 .delay-5 { transition-delay: 0.5s; }
-
+ 
 /* ============================================================
-   RESPONSIVE — TABLET (≤ 1024px)
+   RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
   .footer-grid         { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -1313,245 +1311,53 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .timeline-step--left { flex-direction: column; gap: 16px; }
   .timeline-center     { flex-direction: row; justify-content: flex-start; }
   .order-info-grid     { grid-template-columns: 1fr 1fr; }
-
-  /* Reduce company name a bit */
-  .nav-company-name { font-size: 28px; }
 }
-
-/* ============================================================
-   RESPONSIVE — MOBILE (≤ 768px)
-   ============================================================ */
+ 
 @media (max-width: 768px) {
-
-  /* ── Update navbar heights for mobile ── */
-  :root {
-    --nav-top-h:  60px;
-    --nav-bottom-h: 0px;   /* bottom row hidden on mobile */
-    --nav-total:  60px;
-  }
-
-  .section    { padding: 48px 0; }
-  .section-lg { padding: 64px 0; }
-  .section-sm { padding: 32px 0; }
-
-  /* ── NAVBAR MOBILE ── */
-
-  /* Shrink the top row height */
-  .nav-top { height: 60px; padding: 0 16px; }
-
-  /* Hide cert image / badges */
+  .section    { padding: 56px 0; }
+  .section-lg { padding: 72px 0; }
+ 
+  /* On mobile: hide cert badges to save space */
   .nav-cert-badges { display: none; }
-
-  /* The inline cert img in HTML (right side of nav-top) */
-  .nav-top > div:not(.nav-company-name):last-of-type { display: none; }
-
-  /* Shrink logo */
-  .nav-logo-img  { height: 40px; }
-  .nav-logo-icon { width: 40px; height: 40px; font-size: 22px; }
-
-  /* Company name smaller, allow 2 lines if needed */
-  .nav-company-name {
-    font-size: 18px;
-    letter-spacing: 1px;
-    white-space: normal;
-    line-height: 1.1;
-  }
-  .nav-company-tagline { font-size: 9px; }
-
-  /* Show hamburger button */
-  .nav-toggle { display: flex; right: 12px; }
-
-  /* Hide desktop nav links row entirely */
-  .nav-bottom { display: none; }
-
-  /* Mobile slide-down menu */
-  .nav-links {
-    display: none;
-    flex-direction: column;
+ 
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
     position: fixed;
-    top: 60px; left: 0; right: 0;
+    top: 116px; left: 0; right: 0;
     background: var(--white);
-    padding: 12px 16px 20px;
-    gap: 2px;
+    padding: 16px 24px;
+    gap: 4px;
     border-top: 2px solid var(--gray-100);
-    border-bottom: 3px solid var(--gold);
+    border-bottom: 2px solid var(--gray-100);
     z-index: 999;
-    box-shadow: 0 8px 24px rgba(45,31,122,0.15);
+    box-shadow: 0 8px 24px rgba(45,31,122,0.12);
   }
-  .nav-links.open { display: flex; }
-  .nav-links.open .nav-link {
-    color: var(--gray-700);
-    padding: 12px 16px;
-    border-radius: var(--radius);
-    font-size: 15px;
-    letter-spacing: 2px;
-  }
-  .nav-links.open .nav-link:hover,
-  .nav-links.open .nav-link.active {
-    color: var(--gold);
-    background: var(--light-blue);
-  }
-  /* Remove underline pseudo on mobile menu */
-  .nav-links.open .nav-link::after { display: none; }
-
-  /* ── PAGE HERO ── */
-  .page-hero { padding: 100px 0 56px; }
-
-  /* ── HERO SECTION ── */
-  .hero { min-height: auto; padding-top: 60px; }
-  .hero-content { padding: 48px 0 32px; }
-  .hero-title { font-size: clamp(36px, 10vw, 56px); letter-spacing: 1px; }
-  .hero-description { font-size: 15px; }
-  .hero-actions { gap: 12px; }
-  .hero-actions .btn { padding: 12px 24px; font-size: 13px; }
-  .hero-stats { gap: 20px; padding-top: 28px; }
-  .hero-stat-number { font-size: 32px; }
-  .hero-image-side { justify-content: center; margin-top: 32px; }
-  .hero-machine-frame { max-width: 100%; }
-
-  /* ── STATS ROW ── */
-  .stats-grid { grid-template-columns: 1fr 1fr; }
-  .stat-item  {
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding: 24px 16px;
-  }
-  .stat-item:nth-child(odd)  { border-right: 1px solid rgba(255,255,255,0.07); }
-  .stat-item:last-child,
-  .stat-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
-
-  /* ── GRIDS ── */
-  .why-grid          { grid-template-columns: 1fr; }
-  .products-grid     { grid-template-columns: 1fr; }
-  .capabilities-grid { grid-template-columns: 1fr; }
-  .mv-grid           { grid-template-columns: 1fr; }
-  .order-info-grid   { grid-template-columns: 1fr; }
-  .footer-grid       { grid-template-columns: 1fr; gap: 28px; }
-
-  /* ── INDUSTRIES ── */
-  .industries-grid { grid-template-columns: repeat(3, 1fr); }
-
-  /* ── PROCESS ── */
-  .process-steps { justify-content: flex-start; }
-  .process-step  { min-width: 120px; padding: 20px 10px; }
-
-  /* ── RELATED PRODUCTS GRID (inline style override) ── */
-  /* This targets the inline grid-template-columns on related products */
-  .products-grid[style] { grid-template-columns: 1fr !important; }
-
-  /* ── KEY FEATURES INLINE GRID ── */
-  /* The detail page uses inline grid-template-columns:1fr 1fr 1fr */
-  div[style*="grid-template-columns:1fr 1fr 1fr"],
-  div[style*="grid-template-columns: 1fr 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* ── FOOTER ── */
-  .footer-bottom  { flex-direction: column; text-align: center; }
-  .footer-legal   { justify-content: center; }
-
-  /* ── CTA BANNER ── */
-  .cta-inner   { flex-direction: column; text-align: center; }
-  .cta-actions { justify-content: center; }
-  .cta-banner::before { font-size: 100px; right: 0; }
-
-  /* ── FORMS ── */
-  .form-row { grid-template-columns: 1fr; }
-
-  /* ── BUTTONS ── */
-  .btn { padding: 12px 24px; font-size: 14px; }
-
-  /* ── INQUIRY CTA BOX BUTTONS ── */
-  .inquiry-cta-box div[style*="display:flex"] {
-    flex-direction: column;
-  }
-  .inquiry-cta-box .btn {
-    width: 100% !important;
-    justify-content: center;
-  }
-
-  /* ── VALUES STRIP INLINE FLEX ── */
-  .section-sm > .container > div[style*="display:flex"] {
-    gap: 20px;
-  }
-  /* Hide the "|" separators on small screens */
-  .section-sm > .container > div[style*="display:flex"] > div[style*="font-size:24px"] {
-    display: none;
-  }
-
-  /* ── SECTION HEADERS ── */
-  .section-header { margin-bottom: 36px; }
-  .section-title  { font-size: clamp(24px, 7vw, 40px); }
-  .section-subtitle { font-size: 15px; }
-
-  /* ── ABOUT INTRO ── */
-  .about-intro-grid { gap: 56px; }
-  .about-year-badge { right: 0; bottom: -12px; width: 80px; height: 80px; }
-  .about-year-badge-num { font-size: 28px; }
-
-  /* ── MISSION/VISION ── */
-  .mv-card { padding: 32px 24px; }
-  .mv-card-title { font-size: 26px; }
-
-  /* ── TIMELINE ── */
-  .timeline-step-content { padding: 20px; }
-  .timeline-step-title   { font-size: 18px; }
-
-  /* ── FILTER BAR ── */
-  .filter-bar { top: 60px; padding: 12px 0; }
-  .filter-inner { gap: 6px; }
-  .filter-btn { padding: 6px 14px; font-size: 11px; }
+  .nav-links.open .nav-link { color: var(--gray-700); padding: 10px 14px; }
+  .nav-links.open .nav-link:hover { color: var(--gold); background: var(--light-blue); }
+  .nav-toggle { display: flex; }
+ 
+  .nav-company-name { font-size: 22px; letter-spacing: 2px; }
+  .hero-stats       { gap: 24px; flex-wrap: wrap; }
+  .stats-grid       { grid-template-columns: 1fr 1fr; }
+  .stat-item        { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .why-grid         { grid-template-columns: 1fr; }
+  .industries-grid  { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid      { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom    { flex-direction: column; text-align: center; }
+  .capabilities-grid{ grid-template-columns: 1fr; }
+  .mv-grid          { grid-template-columns: 1fr; }
+  .form-row         { grid-template-columns: 1fr; }
+  .cta-inner        { flex-direction: column; text-align: center; }
+  .cta-actions      { justify-content: center; }
+  .hero-content     { padding: 48px 0; }
+  .order-info-grid  { grid-template-columns: 1fr; }
+  .products-grid    { grid-template-columns: 1fr; }
 }
-
-/* ============================================================
-   RESPONSIVE — SMALL MOBILE (≤ 480px)
-   ============================================================ */
+ 
 @media (max-width: 480px) {
-  .container { padding: 0 14px; }
-
-  .nav-company-name { font-size: 15px; letter-spacing: 0.5px; }
-  .nav-logo-img     { height: 34px; }
-  .nav-logo-icon    { width: 34px; height: 34px; font-size: 18px; }
-
-  .hero-title { font-size: clamp(32px, 11vw, 48px); }
-  .hero-actions { flex-direction: column; }
-  .hero-actions .btn { width: 100%; justify-content: center; }
-
-  .page-hero-title { font-size: clamp(28px, 9vw, 48px); }
-  .page-hero { padding: 90px 0 48px; }
-
-  .industries-grid { grid-template-columns: repeat(2, 1fr); }
-  .industry-item   { padding: 20px 12px; }
-  .industry-icon   { font-size: 24px; }
-  .industry-name   { font-size: 11px; }
-
-  .stats-grid { grid-template-columns: 1fr 1fr; }
-
-  .why-card         { padding: 24px 20px; }
-  .why-card-number  { font-size: 48px; }
-
-  .product-detail-title { font-size: clamp(22px, 7vw, 36px); }
-
-  .timeline-dot { width: 44px; height: 44px; font-size: 18px; }
-
-  .footer { padding-top: 40px; }
-  .footer-grid { gap: 24px; }
-  .footer-brand-name { font-size: 20px; }
-
-  .btn { padding: 11px 20px; font-size: 13px; }
-
-  /* Related products: force 1-col */
-  .products-grid[style*="repeat(3"] { grid-template-columns: 1fr !important; }
-
-  /* Section header */
-  .section-header { margin-bottom: 28px; }
-}
-
-/* ============================================================
-   RESPONSIVE — VERY SMALL (≤ 360px)
-   ============================================================ */
-@media (max-width: 360px) {
-  .nav-company-name { font-size: 13px; }
-  .hero-title       { font-size: 30px; }
-  .btn              { padding: 10px 16px; font-size: 12px; letter-spacing: 1px; }
+  .container        { padding: 0 16px; }
+  .hero-title       { font-size: 40px; }
+  .industries-grid  { grid-template-columns: repeat(2, 1fr); }
+  .nav-company-name { font-size: 18px; letter-spacing: 1px; }
 }
